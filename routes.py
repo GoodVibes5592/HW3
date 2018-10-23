@@ -8,14 +8,14 @@ from passlib.hash import sha256_crypt
 
 # For testing locally
 #app = Flask(__name__)
-app.secret_key = "cscie14a-hw3"
+#app.secret_key = "cscie14a-hw3"
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:pword@localhost/hw3_db'
 
 # For Deploying to Heroku
 from flask_heroku import Heroku
 app = Flask(__name__)
 heroku = Heroku(app)
-
+app.secret_key = "cscie14a-hw3"
 
 db.init_app(app)
 
